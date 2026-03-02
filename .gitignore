@@ -1,0 +1,29 @@
+# Node
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+
+# Build
+*.tsbuildinfo
+build/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+
+# Misc
+*.pem

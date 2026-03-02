@@ -1,0 +1,20 @@
+version: '3.8'
+
+# Solo base de datos para desarrollo local
+# Uso: docker-compose -f docker-compose.dev.yml up
+services:
+  db:
+    image: postgres:16
+    container_name: pymes_db_dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pymes_db
+      POSTGRES_USER: pymes_user
+      POSTGRES_PASSWORD: pymes_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_dev:
